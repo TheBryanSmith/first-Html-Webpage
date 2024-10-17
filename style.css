@@ -5,3 +5,29 @@ p {
 td {
     border-style: solid;
 }
+
+.background-container {
+    height: 100%;
+    width: 100%;
+    background-image: url('https://i.pinimg.com/736x/11/46/54/114654efd2169c3ad5992c5df959dcef.jpg'); 
+    position: absolute ;
+}
+
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2); 
+    z-index: 1; 
+}
+
+p {
+    position: relative;
+    z-index: 2; 
+    color: black; 
+    text-align: center;
+    padding: 20px;
+}
